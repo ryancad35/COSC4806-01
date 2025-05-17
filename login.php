@@ -1,3 +1,12 @@
+<?php
+  session_start();
+
+  $loginError = "";
+  if (isset($_SESSION['failedAttempts'])) {
+  $loginError = "This is unsuccessful attempt number " . $_SESSION['failedAttempts'];
+  }
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,6 +19,7 @@
   <main>
   <form action="validate.php" method="post">
     <!-- <p><?php echo $error; ?></p> -->
+    <p><?php echo $loginError; ?></p>
     <label>Username:</label>
     <br>
     <input type="text" id="username" name="username">

@@ -18,8 +18,7 @@
     } else {
       $_SESSION['failedAttempts'] += 1; // increment failed attempts
     }
-
-    echo "This is unsuccessful attempt number " . $_SESSION['failedAttempts'];
+    header('location: login.php');
   }
 
 ?>
