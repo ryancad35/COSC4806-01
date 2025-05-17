@@ -9,7 +9,9 @@
   $password = $_REQUEST['password']; // ID in login form = password
   
   if ($validUsername == $username && $validPassword == $password) {
+    $_SESSION['authenticated'] = true;
     header('location: index.php');
+    exit;
   } else {
     if (!isset($_SESSION['failedAttempts'])) {
       $_SESSION['failedAttempts'] = 1; // Create session variable $failedAttempts if it doesn't exist yet

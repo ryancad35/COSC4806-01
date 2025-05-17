@@ -8,7 +8,7 @@
     <h1>Login Form</h1>
 
   <main>
-  <form action="/validate.php" method="post">
+  <form action="validate.php" method="post">
     <!-- <p><?php echo $error; ?></p> -->
     <label>Username:</label>
     <br>
