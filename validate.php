@@ -5,10 +5,11 @@
   $validPassword = "password";
   
   $username = $_REQUEST['username']; // ID in login form = username
+  $_SESSION['username'] = $username;
   $password = $_REQUEST['password']; // ID in login form = password
   
   if ($validUsername == $username && $validPassword == $password) {
-    echo "Login successful";
+    header('location: index.php');
   } else {
     if (!isset($_SESSION['failedAttempts'])) {
       $_SESSION['failedAttempts'] = 1; // Create session variable $failedAttempts if it doesn't exist yet
