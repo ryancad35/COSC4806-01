@@ -19,7 +19,8 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
   <body>
     <h1>Assignment #1</h1>
     
-    <p>Welcome, <?=$_SESSION['username'] ?? '' ?></p>
+    <p>Welcome, <?=$_SESSION['username'] ?? ''?>!</p>
+    <p><?php echo date('F j Y');?></p>
 
     
 
