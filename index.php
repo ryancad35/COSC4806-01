@@ -5,6 +5,8 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
     header('Location: login.php');
     exit;
 }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -21,5 +23,9 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
     
 
   </body>
+
+  <footer>
+    <p></p><a href='logout.php'>Click here to logout</a></p>
+  </footer>
   
 </html>
