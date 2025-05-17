@@ -1,6 +1,13 @@
 <?php
   session_start();
 
+
+  // If user is logged in, redirect to index.php
+  if (isset($_SESSION['authenticated']) && $_SESSION['authenticated'] === true) {
+      header('Location: index.php');
+      exit;
+  }
+
   $loginError = "";
   if (isset($_SESSION['failedAttempts'])) {
   $loginError = "This is unsuccessful attempt number " . $_SESSION['failedAttempts'];
