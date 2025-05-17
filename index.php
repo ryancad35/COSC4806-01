@@ -1,9 +1,12 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <title>PHP Test</title>
+    <title>COSC4806</title>
   </head>
-  <body>
-    <?php echo '<p>Hello World</p>'; ?> 
-    <h1> Test </h1>
-
+  
+<body>
+  <h1>Assignment #1</h1>
+  <p>My first paragraph.</p>
+</body>
+  
 </html>
