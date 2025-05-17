@@ -4,5 +4,6 @@
   </head>
   <body>
     <?php echo '<p>Hello World</p>'; ?> 
+    <h1> Test </h1>
 
 </html>
