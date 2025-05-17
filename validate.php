@@ -1,14 +1,22 @@
 <?php 
-$validUsername = "Ryan";
-$validPassword = "password";
+  session_start(); 
+  
+  $validUsername = "Ryan";
+  $validPassword = "password";
+  
+  $username = $_REQUEST['username']; // ID in login form = username
+  $password = $_REQUEST['password']; // ID in login form = password
+  
+  if ($validUsername == $username && $validPassword == $password) {
+    echo "Login successful";
+  } else {
+    if (!isset($_SESSION['failedAttempts'])) {
+      $_SESSION['failedAttempts'] = 1; // Create session variable $failedAttempts if it doesn't exist yet
+    } else {
+      $_SESSION['failedAttempts'] += 1; // increment failed attempts
+    }
 
-$username = $_REQUEST['username']; // ID in login form = username
-$password = $_REQUEST['password']; // ID in login form = password
-
-if ($validUsername == $username && $validPassword == $password) {
-  echo "Login successful";
-} else {
-  echo "Login failed";
-}
+    echo "This is unsuccessful attempt number " . $_SESSION['failedAttempts'];
+  }
 
 ?>
