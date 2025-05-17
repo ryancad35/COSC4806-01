@@ -1,0 +1,5 @@
+{
+  "plugins": ["@prettier/plugin-php"],
+  "parser": "php",
+  "printWidth": 120
+}
