@@ -1,9 +1,8 @@
 <?php
   session_start();
 
-
   // If user is logged in, redirect to index.php
-  if (isset($_SESSION['authenticated']) && $_SESSION['authenticated'] === true) {
+  if (!empty($_SESSION['authenticated'])) {
       header('Location: index.php');
       exit;
   }
