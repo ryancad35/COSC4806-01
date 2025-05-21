@@ -5,10 +5,10 @@
   $validPassword = "password";
   
   $username = $_REQUEST['username']; // ID in login form = username
-  $_SESSION['username'] = $username;
   $password = $_REQUEST['password']; // ID in login form = password
   
   if ($validUsername == $username && $validPassword == $password) {
+    $_SESSION['username'] = $username;
     $_SESSION['authenticated'] = true;
     header('location: index.php');
     exit;
