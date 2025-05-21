@@ -6,15 +6,13 @@ header('Location: login.php');
 
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Logout</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <h1>Assignment #1</h1>
-
-
-
-  </body>
+</body>
 
 </html>

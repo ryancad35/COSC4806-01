@@ -1,0 +1,24 @@
+{
+  "devDependencies": {
+    "@prettier/plugin-php": "^0.19.3",
+    "chokidar-cli": "^3.0.0",
+    "js-beautify": "^1.15.4",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.0"
+  },
+  "scripts": {
+    "format:php": "prettier --plugin-search-dir=. --parser php --write \"*.php\"",
+    "format:html": "js-beautify \"*.php\" --replace --type html --indent-size 4 --templating php",
+    "format": "npm run format:php && npm run format:html",
+    "watch-format": "chokidar \"*.php\" -c \"npm run format\""
+  },
+  "prettier": {
+    "tabWidth": 4,
+    "useTabs": false,
+    "singleQuote": true,
+    "phpVersion": "8.1",
+    "plugins": [
+      "@prettier/plugin-php"
+    ]
+  }
+}

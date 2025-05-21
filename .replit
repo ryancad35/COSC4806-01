@@ -1,6 +1,7 @@
-run = "php -S 0.0.0.0:8000 -t ."
+run = "npm run watch-format & php -S 0.0.0.0:8000 -t ."
 
-entrypoint = "index.php"
+entrypoint = ""
+
 modules = ["nodejs-20"]
 
 [nix]

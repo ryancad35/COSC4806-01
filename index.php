@@ -4,30 +4,26 @@ session_start();
 // If user is not authenticated, redirect to login page
 if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
     header('Location: login.php');
-    exit;
+
+    exit();
 }
-
-
 ?>
 
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>COSC4806</title>
-  </head>
-  
-  <body>
+</head>
+
+<body>
     <h1>Assignment #1</h1>
-    
-    <p>Welcome, <?=$_SESSION['username'] ?? ''?>!</p>
-    <p><?php echo date('F j Y');?></p>
+                        <p>Welcome, <?= $_SESSION['username'] ?? '' ?>!</p>
+    <p><?php echo date('F j Y'); ?></p>
+                </body>
 
-    
-
-  </body>
-
-  <footer>
+<footer>
     <p></p><a href='logout.php'>Click here to logout</a></p>
-  </footer>
-  
+</footer>
+
 </html>
